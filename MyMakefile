@@ -1,0 +1,21 @@
+.PHONY: all clean
+
+all: hello
+
+clean: 
+    rm -f hello *.o
+
+main.o: main.c
+        gcc -c -o main.o main.c
+max.o: max.c
+        gcc -c -o max.o max.c
+structTree.o: structTree.c
+    gcc -c -o structTree.o structTree.c
+addtree.o: addtree.c
+    gcc -c -o addtree.o addtree.c
+order.o: order.c
+    gcc -c -o order.o order.c
+treeprint.o: treeprint.c
+    gcc -c -o treeprint.o treeprint.c
+tree: main.o max.o structTree.o addtree.o order.o treeprint.o
+    gcc -o tree main.o max.o structTree.o addtree.o order.o treeprint.o
