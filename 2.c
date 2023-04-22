@@ -2,16 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct {
-    char surname[100];
-    char initial[4];
-    char gender[1];
-    char groupNum[2];
-    char sub1[1];
-    char sub2[1];
-    char sub3[1];
-} student;
-
 int main(void) {
     FILE* fp = fopen("students2.csv", "r");
     FILE* out = fopen("students.bin", "r+b");
